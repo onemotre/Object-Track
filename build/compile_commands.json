@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/LSMPredict.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/LSMPredict.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/LSMPredict.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/LSMPredict.cpp.o"
+},
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/ObjectInfo.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/ObjectInfo.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/ObjectInfo.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/ObjectInfo.cpp.o"
+},
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/TarObject.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/TarObject.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/TarObject.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/TarObject.cpp.o"
+},
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/imgDrawer.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/imgDrawer.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/imgDrawer.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/imgDrawer.cpp.o"
+},
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/main.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/main.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/main.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/main.cpp.o"
+}
+]
