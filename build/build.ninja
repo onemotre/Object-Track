@@ -252,6 +252,13 @@ build CMakeFiles/trackTask.dir/source/main.cpp.o: CXX_COMPILER__trackTask_unscan
   OBJECT_DIR = CMakeFiles/trackTask.dir
   OBJECT_FILE_DIR = CMakeFiles/trackTask.dir/source
 
+build CMakeFiles/trackTask.dir/source/svmPre.cpp.o: CXX_COMPILER__trackTask_unscanned_Debug /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/svmPre.cpp || cmake_object_order_depends_target_trackTask
+  DEP_FILE = CMakeFiles/trackTask.dir/source/svmPre.cpp.o.d
+  FLAGS = -fopenmp -g
+  INCLUDES = -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4
+  OBJECT_DIR = CMakeFiles/trackTask.dir
+  OBJECT_FILE_DIR = CMakeFiles/trackTask.dir/source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target trackTask
@@ -260,7 +267,7 @@ build CMakeFiles/trackTask.dir/source/main.cpp.o: CXX_COMPILER__trackTask_unscan
 #############################################
 # Link the executable trackTask
 
-build trackTask: CXX_EXECUTABLE_LINKER__trackTask_Debug CMakeFiles/trackTask.dir/source/LSMPredict.cpp.o CMakeFiles/trackTask.dir/source/ObjectInfo.cpp.o CMakeFiles/trackTask.dir/source/TarObject.cpp.o CMakeFiles/trackTask.dir/source/imgDrawer.cpp.o CMakeFiles/trackTask.dir/source/main.cpp.o | /usr/local/lib/libopencv_gapi.so.4.8.0 /usr/local/lib/libopencv_highgui.so.4.8.0 /usr/local/lib/libopencv_ml.so.4.8.0 /usr/local/lib/libopencv_objdetect.so.4.8.0 /usr/local/lib/libopencv_photo.so.4.8.0 /usr/local/lib/libopencv_stitching.so.4.8.0 /usr/local/lib/libopencv_video.so.4.8.0 /usr/local/lib/libopencv_videoio.so.4.8.0 /usr/local/lib/libopencv_imgcodecs.so.4.8.0 /usr/local/lib/libopencv_dnn.so.4.8.0 /usr/local/lib/libopencv_calib3d.so.4.8.0 /usr/local/lib/libopencv_features2d.so.4.8.0 /usr/local/lib/libopencv_flann.so.4.8.0 /usr/local/lib/libopencv_imgproc.so.4.8.0 /usr/local/lib/libopencv_core.so.4.8.0
+build trackTask: CXX_EXECUTABLE_LINKER__trackTask_Debug CMakeFiles/trackTask.dir/source/LSMPredict.cpp.o CMakeFiles/trackTask.dir/source/ObjectInfo.cpp.o CMakeFiles/trackTask.dir/source/TarObject.cpp.o CMakeFiles/trackTask.dir/source/imgDrawer.cpp.o CMakeFiles/trackTask.dir/source/main.cpp.o CMakeFiles/trackTask.dir/source/svmPre.cpp.o | /usr/local/lib/libopencv_gapi.so.4.8.0 /usr/local/lib/libopencv_highgui.so.4.8.0 /usr/local/lib/libopencv_ml.so.4.8.0 /usr/local/lib/libopencv_objdetect.so.4.8.0 /usr/local/lib/libopencv_photo.so.4.8.0 /usr/local/lib/libopencv_stitching.so.4.8.0 /usr/local/lib/libopencv_video.so.4.8.0 /usr/local/lib/libopencv_videoio.so.4.8.0 /usr/local/lib/libopencv_imgcodecs.so.4.8.0 /usr/local/lib/libopencv_dnn.so.4.8.0 /usr/local/lib/libopencv_calib3d.so.4.8.0 /usr/local/lib/libopencv_features2d.so.4.8.0 /usr/local/lib/libopencv_flann.so.4.8.0 /usr/local/lib/libopencv_imgproc.so.4.8.0 /usr/local/lib/libopencv_core.so.4.8.0
   FLAGS = -fopenmp -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libopencv_gapi.so.4.8.0  /usr/local/lib/libopencv_highgui.so.4.8.0  /usr/local/lib/libopencv_ml.so.4.8.0  /usr/local/lib/libopencv_objdetect.so.4.8.0  /usr/local/lib/libopencv_photo.so.4.8.0  /usr/local/lib/libopencv_stitching.so.4.8.0  /usr/local/lib/libopencv_video.so.4.8.0  /usr/local/lib/libopencv_videoio.so.4.8.0  /usr/local/lib/libopencv_imgcodecs.so.4.8.0  /usr/local/lib/libopencv_dnn.so.4.8.0  /usr/local/lib/libopencv_calib3d.so.4.8.0  /usr/local/lib/libopencv_features2d.so.4.8.0  /usr/local/lib/libopencv_flann.so.4.8.0  /usr/local/lib/libopencv_imgproc.so.4.8.0  /usr/local/lib/libopencv_core.so.4.8.0
   OBJECT_DIR = CMakeFiles/trackTask.dir

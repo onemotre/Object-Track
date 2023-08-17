@@ -28,5 +28,11 @@
   "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/main.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/main.cpp",
   "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/main.cpp",
   "output": "CMakeFiles/trackTask.dir/source/main.cpp.o"
+},
+{
+  "directory": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/build",
+  "command": "/usr/bin/c++ -I/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/include -isystem /usr/local/include/opencv4  -fopenmp -g -o CMakeFiles/trackTask.dir/source/svmPre.cpp.o -c /home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/svmPre.cpp",
+  "file": "/home/onemotre/Documents/T-DT/study-task/Object-Track/Object-Track/source/svmPre.cpp",
+  "output": "CMakeFiles/trackTask.dir/source/svmPre.cpp.o"
 }
 ]
