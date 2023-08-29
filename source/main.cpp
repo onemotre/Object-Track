@@ -2,6 +2,7 @@
 #include "TarObject.h"
 #include "imgDrawer.h"
 #include "LSMPredict.h"
+#include "dataTransformer.h"
 
 #include <string>
 #include <iostream>
@@ -68,6 +69,16 @@ TarObeject blockedObject(std::vector<TarObeject> dataList, cv::Mat img)
     return predict_ob;
 }
 
+void storageData(TarObeject datalist)
+{
+    dataTransformer newTransformer;
+    
+    newTransformer.setTarObject(datalist);
+    newTransformer.sendTarObject();
+    
+    return;
+}
+
 void predict()
 {
     initObejectInfo();
@@ -117,9 +128,11 @@ void predict()
                                         predict_ob.get_radius(), cv::Scalar(0, 255, 255));
             predict_ob_draw.draw();
             // update teh dataList
+            currentOrange = predict_ob;
             orangeDataList.push_back(predict_ob);
         }
 
+        storageData(currentOrange);
         ///////// show the result /////////
         cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
         cv::imshow(windowName, frame);

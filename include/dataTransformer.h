@@ -2,11 +2,11 @@
 #include <fstream>
 #include "TarObject.h"
 
-class svmPre{
+class dataTransformer{
     private:
         TarObeject _tarObject;
     public:
-        svmPre();
+        dataTransformer();
 
         void setTarObject(TarObeject tarObject);
         
@@ -16,11 +16,11 @@ class svmPre{
         */
         bool isResult();
         /**
-         * @brief if the svm get the result, return the result
+         * @brief if the model get the result, return the result
         */
         TarObeject getResult();
         /**
-         * @brief get the result from the svm
+         * @brief get the result from the model
         */
 };
 

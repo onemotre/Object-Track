@@ -11,7 +11,14 @@
 ## 安装说明
 
 ### 依赖项
-
+apturl==0.5.2
+bcrypt==3.2.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2020.6.20
+chardet==4.0.0
+chrome-gnome-shell==0.0.0
+click==8.0.3
 - Opencv (版本 >= 4.8)
 - OpenMP
 

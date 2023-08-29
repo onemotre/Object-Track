@@ -1,28 +1,25 @@
-#include "svmPre.h"
+#include "dataTransformer.h"
 #include <iostream>
 
-svmPre::svmPre()
+dataTransformer::dataTransformer()
 {
     this->_tarObject = TarObeject();
 }
 
-void svmPre::setTarObject(TarObeject tarObject)
+void dataTransformer::setTarObject(TarObeject tarObject)
 {
     this->_tarObject = tarObject;
 }
 
-void svmPre::sendTarObject()
+void dataTransformer::sendTarObject()
 {
-    std::ofstream csvFile("../tmp/data.csv");
+    std::ofstream csvFile("../tmp/data.csv", std::ios::app);
 
     if(!csvFile.is_open())
     {
         std::cout << "Error: can not open the file" << std::endl;
         exit(1);
     }
-
-    csvFile << "center_x, center_y, radius, orient" << std::endl;
-
     // write the data to the file
     csvFile << this->_tarObject.get_center().x << ", " 
         << this->_tarObject.get_center().y << ", " 
@@ -34,7 +31,7 @@ void svmPre::sendTarObject()
     return;
 }
 
-bool svmPre::isResult()
+bool dataTransformer::isResult()
 {
     std::ifstream resultFile("../tmp/result.csv");
 
@@ -47,20 +44,20 @@ bool svmPre::isResult()
     std::string result;
     resultFile >> result;
 
-    resultFile.close();
-
     resultFile.seekg(0, std::ios::beg);
     if(resultFile.tellg() == 0)
     {
+        resultFile.close();
         return false;
     }
     else
     {
+        resultFile.close();
         return true;
     }
 }
 
-TarObeject svmPre::getResult()
+TarObeject dataTransformer::getResult()
 {
     float center_x, center_y, radius;
     int orient;
