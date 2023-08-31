@@ -6,6 +6,7 @@
 
 #include <string>
 #include <iostream>
+#include <cstdlib>
 
 std::string windowName = "Main Window";
 std::string path = R"(../resource/orange2.mp4)";
@@ -69,14 +70,24 @@ TarObeject blockedObject(std::vector<TarObeject> dataList, cv::Mat img)
     return predict_ob;
 }
 
-void storageData(TarObeject datalist)
+// predict the position two frames later by kalman
+TarObeject kalmanFilter(TarObeject datalist)
 {
+    // transform the data
     dataTransformer newTransformer;
-    
     newTransformer.setTarObject(datalist);
     newTransformer.sendTarObject();
-    
-    return;
+
+    // run the kalman filter
+    int returnCode = std::system("python3 -u ../scripts/kalman_v2.py");
+    if(returnCode == 0) {
+        // get the result from the result.csv
+        TarObeject result = newTransformer.getResult();
+        return result;
+    } else {
+        std::cout << "Error: can not run the kalman filter" << std::endl;
+        exit(1);
+    }
 }
 
 void predict()
@@ -132,11 +143,16 @@ void predict()
             orangeDataList.push_back(predict_ob);
         }
 
-        storageData(currentOrange);
+        ///////// predict the position two frames later by kalman /////////
+        TarObeject kalman_pre = kalmanFilter(currentOrange);
+        // draw the circle
+        imgDrawer kalman_ob_draw = imgDrawer(frame, kalman_pre.get_center(), 
+                                        kalman_pre.get_radius(), cv::Scalar(255, 0, 0));
+        kalman_ob_draw.draw();
         ///////// show the result /////////
         cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
         cv::imshow(windowName, frame);
-        if(cv::waitKey(50000) == 27) break; 
+        if(cv::waitKey(3) == 27) break; 
     }
     std::cout << "total frames is: " << frameNum << endl;
 }

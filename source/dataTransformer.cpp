@@ -70,23 +70,30 @@ TarObeject dataTransformer::getResult()
         exit(1);
     }
 
+    std::vector<std::vector<std::string>> data;
+
     std::string line;
-    std::getline(resultFile, line);
-
-    std::istringstream iss(line);
-    std::string field;
-    std::vector<std::string> fields;
-
-    while(std::getline(iss, field, ','))
-    {
-        fields.push_back(field);
+    while(std::getline(resultFile, line)) {
+        std::vector<std::string> row;
+        size_t start = 0;
+        size_t end = 0;
+        while(end = line.find(",", start), end != std::string::npos) {
+            row.push_back(line.substr(start, end - start));
+            start = end + 1;
+        }
+        row.push_back(line.substr(start));
+        data.push_back(row);
     }
+    resultFile.close();
 
-    center_x = std::stof(fields[0]);
-    center_y = std::stof(fields[1]);
-    radius = std::stof(fields[2]);
-    orient = std::stoi(fields[3]);
+    std::vector<std::string> lastRow = data[data.size() - 1];
 
+    // get the result
+    center_x = std::stof(lastRow[1]);
+    center_y = std::stof(lastRow[2]);
+    radius = std::stof(lastRow[3]);
+    orient = std::stoi(lastRow[4]);
+    
     TarObeject result;
     result.set_center(cv::Point2f(center_x, center_y));
     result.set_radius(radius);

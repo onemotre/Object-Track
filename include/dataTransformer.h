@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <fstream>
+#include <vector>
 #include "TarObject.h"
 
 class dataTransformer{
