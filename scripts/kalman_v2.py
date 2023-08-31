@@ -51,18 +51,16 @@ def get_Zk(datalist):
         yield np.array([[x], [y]])
 
 # predict the next data
-def predict(xkp, pkp):
-    xk_ = A * xkp
-    pk_ = A * pkp * A.T + Q
+def predict(xkp, pkp, Kk):
     while True:
         # predict function
-        xk_ = A * xk_
-        pk_ = A * pk_ * A.T + Q
+        xk_ = A * xkp
+        pk_ = A * pkp * A.T + Q
         # calibrate function
-        Kk = np.dot(np.dot(pk_, H.T), np.linalg.inv(np.dot(np.dot(H, pk_), H.T) + R))
-        zk = np.dot(H, xk_)
+        zk = np.dot(H, xkp)
         xk = xk_ + np.dot(Kk, (zk - np.dot(H, xk_)))
         pk = np.dot((E - np.dot(Kk, H)), pk_)
+        Kk = np.dot(np.dot(pk_, H.T), np.linalg.inv(np.dot(np.dot(H, pk_), H.T) + R))
         # update and save the parm
         xkp = xk
         pkp = pk
@@ -115,7 +113,7 @@ def kalman():
         pkp = pk
 
         # predict data next
-        x = predict(xkp, pkp)
+        x = predict(xk, pk, Kk)
         for i in range(1,15):
             xk = next(x)
 

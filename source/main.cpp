@@ -152,7 +152,7 @@ void predict()
         ///////// show the result /////////
         cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
         cv::imshow(windowName, frame);
-        if(cv::waitKey(3) == 27) break; 
+        if(cv::waitKey(30) == 27) break; 
     }
     std::cout << "total frames is: " << frameNum << endl;
 }
