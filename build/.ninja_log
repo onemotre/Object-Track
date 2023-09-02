@@ -1,0 +1,12 @@
+# ninja log v5
+0	579	1693501318752377217	CMakeFiles/trackTask.dir/source/imgDrawer.cpp.o	6a3a6745e1584f34
+0	647	1693501318820381401	CMakeFiles/trackTask.dir/source/ObjectInfo.cpp.o	220f677ea2bc7665
+0	604	1693501318776378694	CMakeFiles/trackTask.dir/source/LSMPredict.cpp.o	9b7caea4996221c2
+0	682	1693501318856383616	CMakeFiles/trackTask.dir/source/dataTransformer.cpp.o	6f606cd25069396
+0	705	1693501318876384847	CMakeFiles/trackTask.dir/source/TarObject.cpp.o	6a62c8feb4b48ece
+1	720	1693501318892385831	CMakeFiles/trackTask.dir/source/main.cpp.o	4e40c8f02c6eb665
+720	810	1693501318980391244	trackTask	6f02d28fd4f7f19a
+1	587	1693501544507772107	CMakeFiles/trackTask.dir/source/main.cpp.o	4e40c8f02c6eb665
+587	679	1693501544595775712	trackTask	6f02d28fd4f7f19a
+0	614	1693501555900234172	CMakeFiles/trackTask.dir/source/main.cpp.o	4e40c8f02c6eb665
+614	705	1693501555988237707	trackTask	6f02d28fd4f7f19a
